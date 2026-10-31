@@ -1,0 +1,99 @@
+{
+  "source_file": "store_cctv.mp4",
+  "source_sha256": "f6d18b9025c952f676eda294fb595fae7d68aa32778bd4af386e13355cc572a0",
+  "file_size_bytes": 29018630,
+  "file_size_mb": 27.67,
+  "container": "MP4 (verified from supplied file / ffprobe)",
+  "video_codec": "H.264 (verified from supplied file / ffprobe)",
+  "width": 1270,
+  "height": 720,
+  "fps": 13.093,
+  "opencv_reported_frame_count": 1454,
+  "decoded_frame_count": 1452,
+  "duration_from_frames_seconds": 110.899,
+  "sample_frames": [
+    {
+      "requested_seconds": 0.0,
+      "frame_index": 0,
+      "video_elapsed_seconds": 0.0,
+      "image": "cache/frames/frame_0000_t_000.00s.jpg"
+    },
+    {
+      "requested_seconds": 10.0,
+      "frame_index": 131,
+      "video_elapsed_seconds": 10.005,
+      "image": "cache/frames/frame_0131_t_010.01s.jpg"
+    },
+    {
+      "requested_seconds": 25.0,
+      "frame_index": 327,
+      "video_elapsed_seconds": 24.975,
+      "image": "cache/frames/frame_0327_t_024.98s.jpg"
+    },
+    {
+      "requested_seconds": 40.0,
+      "frame_index": 524,
+      "video_elapsed_seconds": 40.021,
+      "image": "cache/frames/frame_0524_t_040.02s.jpg"
+    },
+    {
+      "requested_seconds": 55.0,
+      "frame_index": 720,
+      "video_elapsed_seconds": 54.991,
+      "image": "cache/frames/frame_0720_t_054.99s.jpg"
+    },
+    {
+      "requested_seconds": 70.0,
+      "frame_index": 917,
+      "video_elapsed_seconds": 70.037,
+      "image": "cache/frames/frame_0917_t_070.04s.jpg"
+    },
+    {
+      "requested_seconds": 85.0,
+      "frame_index": 1113,
+      "video_elapsed_seconds": 85.007,
+      "image": "cache/frames/frame_1113_t_085.01s.jpg"
+    },
+    {
+      "requested_seconds": 100.0,
+      "frame_index": 1309,
+      "video_elapsed_seconds": 99.977,
+      "image": "cache/frames/frame_1309_t_099.98s.jpg"
+    },
+    {
+      "requested_seconds": 109.0,
+      "frame_index": 1427,
+      "video_elapsed_seconds": 108.99,
+      "image": "cache/frames/frame_1427_t_108.99s.jpg"
+    }
+  ],
+  "bottom_edge_sequence_pages": [
+    "bottom_edge_sequence_01.jpg",
+    "bottom_edge_sequence_02.jpg",
+    "bottom_edge_sequence_03.jpg",
+    "bottom_edge_sequence_04.jpg",
+    "bottom_edge_sequence_05.jpg"
+  ],
+  "clock_tail_sample_count": 21,
+  "clock_preview_roi_pixels": {
+    "x1": 0,
+    "y1": 0,
+    "x2": 698,
+    "y2": 108
+  },
+  "bottom_edge_preview_roi_pixels": {
+    "x1": 0,
+    "y1": 417,
+    "x2": 1270,
+    "y2": 720
+  },
+  "notes": [
+    "OpenCV's CAP_PROP_FRAME_COUNT estimate may differ from the actual decoded frame count; this report records both.",
+    "The clock crop and bottom-edge crop are inspection previews, not final calibrated regions.",
+    "The entrance band and upper approach margin must be calibrated from movement sequences before event logic is implemented.",
+    "The sampled clock crops visually suggest the displayed clock reaches about 11:14:31 near the 99-second point and then remains unchanged in the sampled tail; validate with OCR before timestamp mapping.",
+    "The final few seconds contain long runs of repeated or near-identical decoded frames; inspect the tail before interpreting events or timestamps there.",
+    "Frame-zero visible occupancy must be manually annotated; it is not inferred from a detector count.",
+    "The camera only observes part of the store, so occupancy is relative to the visible baseline and validated boundary events."
+  ]
+}

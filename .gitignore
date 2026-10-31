@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+cache/
+models/weights/
+# Keep the source video local; do not push large CCTV media to Git.
+input/*.mp4

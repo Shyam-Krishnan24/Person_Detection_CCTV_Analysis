@@ -1,0 +1,10 @@
+{
+  "video_file": "input/store_cctv.mp4",
+  "frame_index": 0,
+  "cctv_timestamp_visible": "2017-12-22 11:12:43",
+  "visible_total": null,
+  "staff": null,
+  "customers": null,
+  "unknown": null,
+  "annotator_notes": "Fill manually after reviewing frame_zero.jpg. Do not infer from a detector count."
+}

@@ -1,0 +1,3 @@
+project_name: Store_People_Counter
+input_video: input/store_cctv.mp4
+expected_resolution: [1270, 720]

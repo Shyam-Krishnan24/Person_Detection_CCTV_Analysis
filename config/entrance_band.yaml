@@ -1,0 +1,8 @@
+# Coordinates are intentionally not finalized in Section 1.
+# We will calibrate these after reviewing the sampled bottom-edge sequences.
+frame_width: 1270
+frame_height: 720
+entrance_band: null
+upper_approach_margin: null
+entry_direction: upward
+exit_direction: downward

@@ -1,0 +1,7 @@
+{
+  "format": "xyxy_pixel_coordinates",
+  "image_width": 1270,
+  "image_height": 720,
+  "images": [],
+  "instructions": "Add manually labelled people boxes for selected frames. Do not invent boxes for fully unidentifiable occlusions."
+}
