@@ -1,0 +1,1236 @@
+{
+  "schema_version": 1,
+  "annotation_purpose": "detector_evaluation_ground_truth_only",
+  "video_file": "input/store_cctv.mp4",
+  "video": {
+    "width": 1270,
+    "height": 720,
+    "fps": 13.093
+  },
+  "class_names": [
+    "person"
+  ],
+  "frames": [
+    {
+      "frame_index": 0,
+      "video_time_seconds": 0.0,
+      "image_width": 1270,
+      "image_height": 720,
+      "annotations": [
+        {
+          "annotation_id": "F000000_A001",
+          "class_name": "person",
+          "bbox_xyxy": [
+            883,
+            236,
+            984,
+            352
+          ]
+        },
+        {
+          "annotation_id": "F000000_A002",
+          "class_name": "person",
+          "bbox_xyxy": [
+            976,
+            457,
+            1077,
+            578
+          ]
+        },
+        {
+          "annotation_id": "F000000_A003",
+          "class_name": "person",
+          "bbox_xyxy": [
+            1169,
+            457,
+            1257,
+            573
+          ]
+        },
+        {
+          "annotation_id": "F000000_A004",
+          "class_name": "person",
+          "bbox_xyxy": [
+            209,
+            112,
+            316,
+            183
+          ]
+        },
+        {
+          "annotation_id": "F000000_A005",
+          "class_name": "person",
+          "bbox_xyxy": [
+            21,
+            201,
+            86,
+            261
+          ]
+        },
+        {
+          "annotation_id": "F000000_A006",
+          "class_name": "person",
+          "bbox_xyxy": [
+            55,
+            166,
+            124,
+            229
+          ]
+        },
+        {
+          "annotation_id": "F000000_A007",
+          "class_name": "person",
+          "bbox_xyxy": [
+            61,
+            109,
+            131,
+            156
+          ]
+        },
+        {
+          "annotation_id": "F000000_A008",
+          "class_name": "person",
+          "bbox_xyxy": [
+            539,
+            6,
+            613,
+            79
+          ]
+        },
+        {
+          "annotation_id": "F000000_A009",
+          "class_name": "person",
+          "bbox_xyxy": [
+            351,
+            21,
+            424,
+            83
+          ]
+        },
+        {
+          "annotation_id": "F000000_A010",
+          "class_name": "person",
+          "bbox_xyxy": [
+            308,
+            68,
+            359,
+            130
+          ]
+        },
+        {
+          "annotation_id": "F000000_A011",
+          "class_name": "person",
+          "bbox_xyxy": [
+            265,
+            69,
+            314,
+            118
+          ]
+        },
+        {
+          "annotation_id": "F000000_A012",
+          "class_name": "person",
+          "bbox_xyxy": [
+            217,
+            64,
+            276,
+            119
+          ]
+        },
+        {
+          "annotation_id": "F000000_A013",
+          "class_name": "person",
+          "bbox_xyxy": [
+            132,
+            72,
+            187,
+            127
+          ]
+        }
+      ],
+      "person_count": 13
+    },
+    {
+      "frame_index": 131,
+      "video_time_seconds": 10.005,
+      "image_width": 1270,
+      "image_height": 720,
+      "annotations": [
+        {
+          "annotation_id": "F000131_A001",
+          "class_name": "person",
+          "bbox_xyxy": [
+            752,
+            377,
+            865,
+            541
+          ]
+        },
+        {
+          "annotation_id": "F000131_A002",
+          "class_name": "person",
+          "bbox_xyxy": [
+            1026,
+            412,
+            1116,
+            511
+          ]
+        },
+        {
+          "annotation_id": "F000131_A003",
+          "class_name": "person",
+          "bbox_xyxy": [
+            1007,
+            212,
+            1088,
+            309
+          ]
+        },
+        {
+          "annotation_id": "F000131_A004",
+          "class_name": "person",
+          "bbox_xyxy": [
+            922,
+            243,
+            993,
+            332
+          ]
+        },
+        {
+          "annotation_id": "F000131_A005",
+          "class_name": "person",
+          "bbox_xyxy": [
+            876,
+            129,
+            970,
+            208
+          ]
+        },
+        {
+          "annotation_id": "F000131_A006",
+          "class_name": "person",
+          "bbox_xyxy": [
+            236,
+            94,
+            333,
+            184
+          ]
+        },
+        {
+          "annotation_id": "F000131_A007",
+          "class_name": "person",
+          "bbox_xyxy": [
+            60,
+            132,
+            127,
+            194
+          ]
+        },
+        {
+          "annotation_id": "F000131_A008",
+          "class_name": "person",
+          "bbox_xyxy": [
+            36,
+            173,
+            119,
+            242
+          ]
+        },
+        {
+          "annotation_id": "F000131_A009",
+          "class_name": "person",
+          "bbox_xyxy": [
+            415,
+            72,
+            487,
+            141
+          ]
+        },
+        {
+          "annotation_id": "F000131_A010",
+          "class_name": "person",
+          "bbox_xyxy": [
+            372,
+            58,
+            435,
+            109
+          ]
+        },
+        {
+          "annotation_id": "F000131_A011",
+          "class_name": "person",
+          "bbox_xyxy": [
+            608,
+            14,
+            680,
+            83
+          ]
+        }
+      ],
+      "person_count": 11
+    },
+    {
+      "frame_index": 262,
+      "video_time_seconds": 20.011,
+      "image_width": 1270,
+      "image_height": 720,
+      "annotations": [
+        {
+          "annotation_id": "F000262_A001",
+          "class_name": "person",
+          "bbox_xyxy": [
+            723,
+            278,
+            878,
+            440
+          ]
+        },
+        {
+          "annotation_id": "F000262_A002",
+          "class_name": "person",
+          "bbox_xyxy": [
+            1048,
+            413,
+            1158,
+            591
+          ]
+        },
+        {
+          "annotation_id": "F000262_A003",
+          "class_name": "person",
+          "bbox_xyxy": [
+            1191,
+            377,
+            1269,
+            546
+          ]
+        },
+        {
+          "annotation_id": "F000262_A004",
+          "class_name": "person",
+          "bbox_xyxy": [
+            842,
+            104,
+            936,
+            214
+          ]
+        },
+        {
+          "annotation_id": "F000262_A005",
+          "class_name": "person",
+          "bbox_xyxy": [
+            736,
+            53,
+            817,
+            118
+          ]
+        },
+        {
+          "annotation_id": "F000262_A006",
+          "class_name": "person",
+          "bbox_xyxy": [
+            695,
+            84,
+            757,
+            144
+          ]
+        },
+        {
+          "annotation_id": "F000262_A007",
+          "class_name": "person",
+          "bbox_xyxy": [
+            644,
+            35,
+            710,
+            96
+          ]
+        },
+        {
+          "annotation_id": "F000262_A008",
+          "class_name": "person",
+          "bbox_xyxy": [
+            197,
+            117,
+            287,
+            184
+          ]
+        },
+        {
+          "annotation_id": "F000262_A009",
+          "class_name": "person",
+          "bbox_xyxy": [
+            55,
+            172,
+            159,
+            250
+          ]
+        },
+        {
+          "annotation_id": "F000262_A010",
+          "class_name": "person",
+          "bbox_xyxy": [
+            61,
+            130,
+            117,
+            188
+          ]
+        },
+        {
+          "annotation_id": "F000262_A011",
+          "class_name": "person",
+          "bbox_xyxy": [
+            194,
+            83,
+            279,
+            131
+          ]
+        }
+      ],
+      "person_count": 11
+    },
+    {
+      "frame_index": 393,
+      "video_time_seconds": 30.016,
+      "image_width": 1270,
+      "image_height": 720,
+      "annotations": [
+        {
+          "annotation_id": "F000393_A001",
+          "class_name": "person",
+          "bbox_xyxy": [
+            379,
+            117,
+            471,
+            217
+          ]
+        },
+        {
+          "annotation_id": "F000393_A002",
+          "class_name": "person",
+          "bbox_xyxy": [
+            255,
+            104,
+            339,
+            163
+          ]
+        },
+        {
+          "annotation_id": "F000393_A003",
+          "class_name": "person",
+          "bbox_xyxy": [
+            177,
+            98,
+            243,
+            157
+          ]
+        },
+        {
+          "annotation_id": "F000393_A004",
+          "class_name": "person",
+          "bbox_xyxy": [
+            65,
+            137,
+            150,
+            200
+          ]
+        },
+        {
+          "annotation_id": "F000393_A005",
+          "class_name": "person",
+          "bbox_xyxy": [
+            41,
+            184,
+            130,
+            253
+          ]
+        },
+        {
+          "annotation_id": "F000393_A006",
+          "class_name": "person",
+          "bbox_xyxy": [
+            748,
+            64,
+            818,
+            127
+          ]
+        },
+        {
+          "annotation_id": "F000393_A007",
+          "class_name": "person",
+          "bbox_xyxy": [
+            818,
+            127,
+            865,
+            171
+          ]
+        },
+        {
+          "annotation_id": "F000393_A008",
+          "class_name": "person",
+          "bbox_xyxy": [
+            676,
+            91,
+            722,
+            139
+          ]
+        },
+        {
+          "annotation_id": "F000393_A009",
+          "class_name": "person",
+          "bbox_xyxy": [
+            730,
+            61,
+            774,
+            106
+          ]
+        },
+        {
+          "annotation_id": "F000393_A010",
+          "class_name": "person",
+          "bbox_xyxy": [
+            663,
+            36,
+            713,
+            94
+          ]
+        }
+      ],
+      "person_count": 10
+    },
+    {
+      "frame_index": 524,
+      "video_time_seconds": 40.021,
+      "image_width": 1270,
+      "image_height": 720,
+      "annotations": [
+        {
+          "annotation_id": "F000524_A001",
+          "class_name": "person",
+          "bbox_xyxy": [
+            377,
+            128,
+            467,
+            221
+          ]
+        },
+        {
+          "annotation_id": "F000524_A002",
+          "class_name": "person",
+          "bbox_xyxy": [
+            212,
+            203,
+            299,
+            260
+          ]
+        },
+        {
+          "annotation_id": "F000524_A003",
+          "class_name": "person",
+          "bbox_xyxy": [
+            223,
+            84,
+            286,
+            142
+          ]
+        },
+        {
+          "annotation_id": "F000524_A004",
+          "class_name": "person",
+          "bbox_xyxy": [
+            194,
+            127,
+            236,
+            171
+          ]
+        },
+        {
+          "annotation_id": "F000524_A005",
+          "class_name": "person",
+          "bbox_xyxy": [
+            36,
+            178,
+            107,
+            242
+          ]
+        },
+        {
+          "annotation_id": "F000524_A006",
+          "class_name": "person",
+          "bbox_xyxy": [
+            71,
+            146,
+            121,
+            190
+          ]
+        },
+        {
+          "annotation_id": "F000524_A007",
+          "class_name": "person",
+          "bbox_xyxy": [
+            633,
+            27,
+            680,
+            77
+          ]
+        },
+        {
+          "annotation_id": "F000524_A008",
+          "class_name": "person",
+          "bbox_xyxy": [
+            670,
+            47,
+            719,
+            101
+          ]
+        },
+        {
+          "annotation_id": "F000524_A009",
+          "class_name": "person",
+          "bbox_xyxy": [
+            716,
+            56,
+            773,
+            115
+          ]
+        },
+        {
+          "annotation_id": "F000524_A010",
+          "class_name": "person",
+          "bbox_xyxy": [
+            805,
+            113,
+            858,
+            174
+          ]
+        }
+      ],
+      "person_count": 10
+    },
+    {
+      "frame_index": 655,
+      "video_time_seconds": 50.027,
+      "image_width": 1270,
+      "image_height": 720,
+      "annotations": [
+        {
+          "annotation_id": "F000655_A001",
+          "class_name": "person",
+          "bbox_xyxy": [
+            304,
+            179,
+            380,
+            251
+          ]
+        },
+        {
+          "annotation_id": "F000655_A002",
+          "class_name": "person",
+          "bbox_xyxy": [
+            246,
+            138,
+            328,
+            194
+          ]
+        },
+        {
+          "annotation_id": "F000655_A003",
+          "class_name": "person",
+          "bbox_xyxy": [
+            184,
+            133,
+            241,
+            188
+          ]
+        },
+        {
+          "annotation_id": "F000655_A004",
+          "class_name": "person",
+          "bbox_xyxy": [
+            10,
+            208,
+            89,
+            275
+          ]
+        },
+        {
+          "annotation_id": "F000655_A005",
+          "class_name": "person",
+          "bbox_xyxy": [
+            39,
+            136,
+            112,
+            183
+          ]
+        },
+        {
+          "annotation_id": "F000655_A006",
+          "class_name": "person",
+          "bbox_xyxy": [
+            608,
+            29,
+            652,
+            84
+          ]
+        },
+        {
+          "annotation_id": "F000655_A007",
+          "class_name": "person",
+          "bbox_xyxy": [
+            673,
+            42,
+            733,
+            115
+          ]
+        },
+        {
+          "annotation_id": "F000655_A008",
+          "class_name": "person",
+          "bbox_xyxy": [
+            799,
+            110,
+            862,
+            190
+          ]
+        },
+        {
+          "annotation_id": "F000655_A009",
+          "class_name": "person",
+          "bbox_xyxy": [
+            352,
+            117,
+            446,
+            196
+          ]
+        },
+        {
+          "annotation_id": "F000655_A010",
+          "class_name": "person",
+          "bbox_xyxy": [
+            425,
+            573,
+            587,
+            719
+          ]
+        }
+      ],
+      "person_count": 10
+    },
+    {
+      "frame_index": 786,
+      "video_time_seconds": 60.032,
+      "image_width": 1270,
+      "image_height": 720,
+      "annotations": [
+        {
+          "annotation_id": "F000786_A001",
+          "class_name": "person",
+          "bbox_xyxy": [
+            305,
+            206,
+            403,
+            344
+          ]
+        },
+        {
+          "annotation_id": "F000786_A002",
+          "class_name": "person",
+          "bbox_xyxy": [
+            432,
+            169,
+            546,
+            274
+          ]
+        },
+        {
+          "annotation_id": "F000786_A003",
+          "class_name": "person",
+          "bbox_xyxy": [
+            379,
+            206,
+            441,
+            270
+          ]
+        },
+        {
+          "annotation_id": "F000786_A004",
+          "class_name": "person",
+          "bbox_xyxy": [
+            1063,
+            362,
+            1147,
+            507
+          ]
+        },
+        {
+          "annotation_id": "F000786_A005",
+          "class_name": "person",
+          "bbox_xyxy": [
+            745,
+            89,
+            809,
+            143
+          ]
+        },
+        {
+          "annotation_id": "F000786_A006",
+          "class_name": "person",
+          "bbox_xyxy": [
+            699,
+            84,
+            767,
+            141
+          ]
+        },
+        {
+          "annotation_id": "F000786_A007",
+          "class_name": "person",
+          "bbox_xyxy": [
+            646,
+            29,
+            709,
+            80
+          ]
+        },
+        {
+          "annotation_id": "F000786_A008",
+          "class_name": "person",
+          "bbox_xyxy": [
+            613,
+            33,
+            663,
+            80
+          ]
+        },
+        {
+          "annotation_id": "F000786_A009",
+          "class_name": "person",
+          "bbox_xyxy": [
+            279,
+            86,
+            359,
+            147
+          ]
+        },
+        {
+          "annotation_id": "F000786_A010",
+          "class_name": "person",
+          "bbox_xyxy": [
+            192,
+            151,
+            263,
+            199
+          ]
+        },
+        {
+          "annotation_id": "F000786_A011",
+          "class_name": "person",
+          "bbox_xyxy": [
+            79,
+            140,
+            147,
+            197
+          ]
+        }
+      ],
+      "person_count": 11
+    },
+    {
+      "frame_index": 917,
+      "video_time_seconds": 70.037,
+      "image_width": 1270,
+      "image_height": 720,
+      "annotations": [
+        {
+          "annotation_id": "F000917_A001",
+          "class_name": "person",
+          "bbox_xyxy": [
+            335,
+            225,
+            457,
+            315
+          ]
+        },
+        {
+          "annotation_id": "F000917_A002",
+          "class_name": "person",
+          "bbox_xyxy": [
+            707,
+            316,
+            828,
+            434
+          ]
+        },
+        {
+          "annotation_id": "F000917_A003",
+          "class_name": "person",
+          "bbox_xyxy": [
+            212,
+            266,
+            303,
+            355
+          ]
+        },
+        {
+          "annotation_id": "F000917_A004",
+          "class_name": "person",
+          "bbox_xyxy": [
+            197,
+            130,
+            255,
+            181
+          ]
+        },
+        {
+          "annotation_id": "F000917_A005",
+          "class_name": "person",
+          "bbox_xyxy": [
+            208,
+            92,
+            270,
+            129
+          ]
+        },
+        {
+          "annotation_id": "F000917_A006",
+          "class_name": "person",
+          "bbox_xyxy": [
+            45,
+            144,
+            122,
+            192
+          ]
+        },
+        {
+          "annotation_id": "F000917_A007",
+          "class_name": "person",
+          "bbox_xyxy": [
+            268,
+            73,
+            345,
+            143
+          ]
+        },
+        {
+          "annotation_id": "F000917_A008",
+          "class_name": "person",
+          "bbox_xyxy": [
+            751,
+            123,
+            805,
+            186
+          ]
+        },
+        {
+          "annotation_id": "F000917_A009",
+          "class_name": "person",
+          "bbox_xyxy": [
+            676,
+            57,
+            752,
+            114
+          ]
+        },
+        {
+          "annotation_id": "F000917_A010",
+          "class_name": "person",
+          "bbox_xyxy": [
+            528,
+            21,
+            590,
+            75
+          ]
+        }
+      ],
+      "person_count": 10
+    },
+    {
+      "frame_index": 1047,
+      "video_time_seconds": 79.966,
+      "image_width": 1270,
+      "image_height": 720,
+      "annotations": [
+        {
+          "annotation_id": "F001047_A001",
+          "class_name": "person",
+          "bbox_xyxy": [
+            310,
+            315,
+            415,
+            414
+          ]
+        },
+        {
+          "annotation_id": "F001047_A002",
+          "class_name": "person",
+          "bbox_xyxy": [
+            138,
+            302,
+            246,
+            401
+          ]
+        },
+        {
+          "annotation_id": "F001047_A003",
+          "class_name": "person",
+          "bbox_xyxy": [
+            71,
+            136,
+            131,
+            187
+          ]
+        },
+        {
+          "annotation_id": "F001047_A004",
+          "class_name": "person",
+          "bbox_xyxy": [
+            193,
+            148,
+            266,
+            201
+          ]
+        },
+        {
+          "annotation_id": "F001047_A005",
+          "class_name": "person",
+          "bbox_xyxy": [
+            193,
+            80,
+            251,
+            133
+          ]
+        },
+        {
+          "annotation_id": "F001047_A006",
+          "class_name": "person",
+          "bbox_xyxy": [
+            236,
+            68,
+            307,
+            141
+          ]
+        },
+        {
+          "annotation_id": "F001047_A007",
+          "class_name": "person",
+          "bbox_xyxy": [
+            631,
+            156,
+            744,
+            238
+          ]
+        },
+        {
+          "annotation_id": "F001047_A008",
+          "class_name": "person",
+          "bbox_xyxy": [
+            790,
+            118,
+            843,
+            182
+          ]
+        },
+        {
+          "annotation_id": "F001047_A009",
+          "class_name": "person",
+          "bbox_xyxy": [
+            658,
+            61,
+            723,
+            112
+          ]
+        }
+      ],
+      "person_count": 9
+    },
+    {
+      "frame_index": 1178,
+      "video_time_seconds": 89.972,
+      "image_width": 1270,
+      "image_height": 720,
+      "annotations": [
+        {
+          "annotation_id": "F001178_A001",
+          "class_name": "person",
+          "bbox_xyxy": [
+            418,
+            526,
+            547,
+            646
+          ]
+        },
+        {
+          "annotation_id": "F001178_A002",
+          "class_name": "person",
+          "bbox_xyxy": [
+            198,
+            260,
+            283,
+            363
+          ]
+        },
+        {
+          "annotation_id": "F001178_A003",
+          "class_name": "person",
+          "bbox_xyxy": [
+            90,
+            130,
+            147,
+            192
+          ]
+        },
+        {
+          "annotation_id": "F001178_A004",
+          "class_name": "person",
+          "bbox_xyxy": [
+            181,
+            97,
+            246,
+            159
+          ]
+        },
+        {
+          "annotation_id": "F001178_A005",
+          "class_name": "person",
+          "bbox_xyxy": [
+            256,
+            54,
+            332,
+            141
+          ]
+        },
+        {
+          "annotation_id": "F001178_A006",
+          "class_name": "person",
+          "bbox_xyxy": [
+            467,
+            122,
+            572,
+            202
+          ]
+        },
+        {
+          "annotation_id": "F001178_A007",
+          "class_name": "person",
+          "bbox_xyxy": [
+            957,
+            151,
+            1020,
+            242
+          ]
+        },
+        {
+          "annotation_id": "F001178_A008",
+          "class_name": "person",
+          "bbox_xyxy": [
+            657,
+            69,
+            719,
+            135
+          ]
+        },
+        {
+          "annotation_id": "F001178_A009",
+          "class_name": "person",
+          "bbox_xyxy": [
+            488,
+            5,
+            549,
+            48
+          ]
+        }
+      ],
+      "person_count": 9
+    },
+    {
+      "frame_index": 1309,
+      "video_time_seconds": 99.977,
+      "image_width": 1270,
+      "image_height": 720,
+      "annotations": [
+        {
+          "annotation_id": "F001309_A001",
+          "class_name": "person",
+          "bbox_xyxy": [
+            1105,
+            246,
+            1171,
+            335
+          ]
+        },
+        {
+          "annotation_id": "F001309_A002",
+          "class_name": "person",
+          "bbox_xyxy": [
+            855,
+            119,
+            929,
+            188
+          ]
+        },
+        {
+          "annotation_id": "F001309_A003",
+          "class_name": "person",
+          "bbox_xyxy": [
+            74,
+            140,
+            158,
+            195
+          ]
+        },
+        {
+          "annotation_id": "F001309_A004",
+          "class_name": "person",
+          "bbox_xyxy": [
+            186,
+            101,
+            252,
+            148
+          ]
+        },
+        {
+          "annotation_id": "F001309_A005",
+          "class_name": "person",
+          "bbox_xyxy": [
+            264,
+            64,
+            334,
+            118
+          ]
+        },
+        {
+          "annotation_id": "F001309_A006",
+          "class_name": "person",
+          "bbox_xyxy": [
+            113,
+            73,
+            176,
+            122
+          ]
+        },
+        {
+          "annotation_id": "F001309_A007",
+          "class_name": "person",
+          "bbox_xyxy": [
+            508,
+            2,
+            564,
+            44
+          ]
+        },
+        {
+          "annotation_id": "F001309_A008",
+          "class_name": "person",
+          "bbox_xyxy": [
+            458,
+            23,
+            497,
+            57
+          ]
+        }
+      ],
+      "person_count": 8
+    }
+  ],
+  "frame_count": 11,
+  "total_person_boxes": 112
+}

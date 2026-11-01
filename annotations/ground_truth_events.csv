@@ -1,0 +1,11 @@
+﻿event_id,frame_index,video_time_seconds,event,person_id,notes
+EVT001,54,4.124,IN,GT001,
+EVT002,128,9.776,IN,GT002,
+EVT003,128,9.776,IN,GT003,
+EVT004,247,18.865,OUT,GT001,black full-tshirt guy leaving
+EVT005,289,22.073,IN,GT004,white dress woman enters and stand below the camera
+EVT006,556,42.465,OUT,GT002,old woman blue color raincoat woman leaving
+EVT007,621,47.430,IN,GT002,the woman left is re-entering
+EVT008,810,61.865,IN,GT006,child girl is entering
+EVT009,890,67.975,OUT,GT003,child and woman leaving here stood on the red line
+EVT010,890,67.975,OUT,,second person in the group leaving
