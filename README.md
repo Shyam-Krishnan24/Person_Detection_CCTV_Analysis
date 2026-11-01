@@ -1,102 +1,192 @@
-# Store People Counter — Section 1 Package
 
-This package contains the project scaffold and completed **Section 1: Video Inspection** utilities and outputs. The assignment is scoped to offline analysis of the supplied CCTV MP4. It does not implement real-time CCTV monitoring.
+@'
+# Store CCTV People Counter
 
-## Included
+An offline computer-vision system that detects and tracks people in a recorded CCTV video, identifies candidate entrance and exit crossings, and estimates store occupancy.
 
-- `input/store_cctv.mp4` — supplied source video, kept unchanged.
-- `src/video_inspector.py` — reusable inspection utility.
-- `scripts/inspect_video.py` — command-line entry point.
-- `reports/visual_inspection/` — metadata report, first frame, representative contact sheets and JSON report.
-- `annotations/*template*` — empty annotation templates for later sections.
-- `config/` — provisional settings; entrance coordinates are intentionally not calibrated yet.
-- `requirements.txt` — dependencies planned for the complete offline pipeline.
+## 1. Features
 
-## Project location (Windows)
+- Person detection using YOLOv8n in ONNX format.
+- ONNX Runtime CPU inference.
+- Bounding boxes and tracking IDs.
+- Entrance/exit line visualization.
+- IN and OUT event detection using tracked footpoints.
+- Automatic initial occupancy estimation.
+- Live occupancy overlay in the processed video.
+- CSV event log and occupancy timeline.
+- Offline processing; no cloud service or live CCTV connection required.
 
-The recommended project directory for this setup is:
+## 2. Technology
+
+| Component | Technology |
+|---|---|
+| Person detection | YOLOv8n ONNX |
+| Model runtime | ONNX Runtime |
+| Video processing | OpenCV |
+| Object tracking | Custom ByteTrack-style tracker |
+| Association | IoU, motion prediction and Hungarian assignment |
+| Data processing | Python, NumPy, CSV |
+| Entrance calibration | YAML configuration |
+
+The tracker is a lightweight custom implementation inspired by ByteTrack-style two-stage association. It is not the official Ultralytics ByteTrack implementation.
+
+## 3. Project structure
 
 ```text
-F:\Store_People_Counter
+Store_People_Counter/
+|
+|-- input/
+|   |-- store_cctv.mp4
+|
+|-- models/
+|   |-- yolov8n.onnx
+|
+|-- config/
+|   |-- entrance_band.yaml
+|
+|-- src/
+|   |-- onnx_detector.py
+|   |-- byte_tracker.py
+|   |-- people_counter.py
+|
+|-- scripts/
+|   |-- run_people_counter.py
+|   |-- export_submission_events.py
+|
+|-- annotations/
+|   |-- detection_labels.json
+|   |-- detection_labels_fullbody.json
+|   |-- ground_truth_events.csv
+|
+|-- reports/
+    |-- initial_occupancy/
+    |-- people_counter/
+        |-- annotated_people_counter.mp4
+        |-- people_counting_events.csv
+        |-- events.csv
+        |-- occupancy_timeline.csv
+        |-- track_summary.csv
 ```
 
-After extracting the ZIP, confirm that this file exists:
+## 4. Requirements
+
+- Windows 10/11
+- Python 3.12
+- OpenCV
+- NumPy
+- ONNX Runtime
+- PyYAML
+- SciPy
+
+Install the required packages in your Python environment:
+
+```powershell
+python -m pip install numpy opencv-python onnxruntime PyYAML scipy
+```
+
+The project uses ONNX Runtime CPU execution. PyTorch and a CUDA-enabled GPU are not required.
+
+## 5. Input files
+
+Place the CCTV video here:
 
 ```text
-F:\Store_People_Counter\input\store_cctv.mp4
+input/store_cctv.mp4
 ```
 
-## Python environment setup (PowerShell)
+Place the YOLOv8n ONNX model here:
 
-Use Python 3.12.x. Open PowerShell and run:
+```text
+models/yolov8n.onnx
+```
+
+The entrance line and inside reference point are configured in:
+
+```text
+config/entrance_band.yaml
+```
+
+The line must be calibrated to the entrance visible in the CCTV footage.
+
+## 6. Run the system
+
+Activate the virtual environment if it is not already active:
 
 ```powershell
-cd F:\Store_People_Counter
-py -3.12 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-pip install -r requirements.txt
+.venv\Scripts\Activate.ps1
 ```
 
-If PowerShell blocks activation, run this once in the current PowerShell window, then activate again:
+From the project root, run:
 
 ```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\.venv\Scripts\Activate.ps1
+python -m scripts.run_people_counter
 ```
 
-## PyTorch and NVIDIA GPU note
+The program performs two passes:
 
-Ultralytics depends on PyTorch. The requirements file installs the compatible PyTorch dependency selected by pip, but that does not guarantee that the installed build can use the NVIDIA GPU. First verify the environment:
+1. Analyses the opening two seconds to estimate initial occupancy.
+2. Processes the complete video, detects and tracks people, checks entrance-line crossings, and renders the output.
+
+Export the required submission CSV:
 
 ```powershell
-python -c "import torch; print('Torch:', torch.__version__); print('CUDA available:', torch.cuda.is_available()); print('GPU:', torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU')"
+python -m scripts.export_submission_events
 ```
 
-If CUDA is unavailable, use the official PyTorch installation selector at https://pytorch.org/get-started/locally/ to choose the Windows, pip, Python and CUDA build supported by your driver. Install the selected PyTorch/torchvision command inside the activated `.venv`, then rerun the verification command. The project remains runnable on CPU, although inference will be slower. Do not install a random CUDA wheel or CUDA toolkit version by guesswork.
+## 7. Output files
 
-## Tesseract OCR note
+All main outputs are saved under:
 
-`pytesseract` is a Python wrapper. Actual OCR also requires the Tesseract OCR application to be installed separately on Windows and available on `PATH`. OCR recognition is not part of Section 1; this dependency is included for the planned timestamp stage.
-
-## Run Section 1 inspection
-
-```powershell
-python scripts\inspect_video.py --video input\store_cctv.mp4 --project-root .
+```text
+reports/people_counter/
 ```
 
-Optional sample times (seconds):
+| Output | Description |
+|---|---|
+| annotated_people_counter.mp4 | Annotated video with bounding boxes, IDs, entrance line and occupancy overlay |
+| people_counting_events.csv | Detailed event log, including frame number and footpoint coordinates |
+| events.csv | Submission CSV with timestamp, person_id, event and headcount |
+| occupancy_timeline.csv | Frame-by-frame occupancy and event totals |
+| track_summary.csv | Track start, end and observation statistics |
 
-```powershell
-python scripts\inspect_video.py --video input\store_cctv.mp4 --project-root . --samples 0,5,10,20,30,40,50,60,70,80,90,100,109
+The initial occupancy candidate report is saved at:
+
+```text
+reports/initial_occupancy/initial_occupancy_candidates.csv
 ```
 
-The script writes outputs to `cache\frames\` and `reports\visual_inspection\`.
+## 8. Counting logic
 
-## Verified source-video metadata
+The estimated occupancy is calculated as:
 
-- MP4 container; H.264 video stream
-- 1270 × 720 pixels
-- Average stream frame rate: approximately 13.093 FPS
-- 1,452 decoded video frames
-- Duration by frame count / average FPS: approximately 110.899 seconds
-- Frame-zero clock visibly reads `2017/12/22 11:12:43`
-- Sampled clock crops suggest the displayed clock reaches approximately `11:14:31` around video time 99 seconds and then stops changing in the sampled tail; OCR validation is pending.
-- The final few seconds contain long runs of repeated or near-identical frames.
+```text
+Current Occupancy = Initial Occupancy + IN Events - OUT Events
+```
 
-The clock must not be extrapolated linearly through the apparent plateau. The MP4 container duration reported by ffprobe is approximately 111.068 seconds. Frame-index / stream-FPS is the processing timeline.
+The system uses the bottom-centre point of each person's bounding box as the footpoint. It checks whether a tracked person's movement crosses the calibrated entrance segment.
 
-## Section 1 boundaries
+The initial occupancy is estimated from stable tracks observed near the beginning of the video and classified on the inside of the entrance line.
 
-This stage inspects the video and prepares reference images. It does **not** run OCR recognition, person detection, tracking, entry/exit counting or headcount calculation. The broad clock and bottom-edge preview crops are not final calibrated regions.
+## 9. Known limitations
 
-## Next approval gate
+- Partial occlusion can cause missed detections or fragmented tracking IDs.
+- People entering close together may overlap and be detected as one person.
+- A person who disappears behind an obstruction may receive a new tracking ID after reappearing.
+- Incorrect footpoint positions or an imperfect entrance calibration can cause missed or incorrect crossing events.
+- Initial occupancy is an estimate, not a manually confirmed count.
+- Staff and customers are not separately classified. All detected people are treated equally.
+- The system has been evaluated on a limited set of manually annotated frames and events. Its event counts should not be treated as fully accurate.
 
-Review these outputs before Section 1 is approved:
+## 10. Future improvements
 
-1. `reports/visual_inspection/full_frame_contact_sheet.jpg`
-2. `reports/visual_inspection/clock_region_samples.jpg`
-3. `reports/visual_inspection/bottom_edge_samples.jpg`
-4. `reports/visual_inspection/video_inspection.md`
+- Improve tracking through longer occlusions.
+- Use appearance-based re-identification to reduce ID changes.
+- Improve group-entry separation.
+- Validate entrance geometry and crossing direction against more annotated events.
+- Add staff/customer classification using a suitable labeled dataset.
+- Evaluate precision, recall, F1-score and occupancy error on a larger ground-truth sample.
 
-Then we will manually establish the frame-zero visible baseline and calibrate the entrance band and upper approach margin from actual movement sequences.
+## 11. Execution mode
+
+This project processes a recorded CCTV video offline. It does not connect to a live camera, transmit footage to a cloud service, or identify people by their real-world identity.
+'@ | Set-Content -Encoding UTF8 README.md
