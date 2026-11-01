@@ -1,8 +1,33 @@
-# Coordinates are intentionally not finalized in Section 1.
-# We will calibrate these after reviewing the sampled bottom-edge sequences.
+schema_version: 1
 frame_width: 1270
 frame_height: 720
-entrance_band: null
-upper_approach_margin: null
-entry_direction: upward
-exit_direction: downward
+coordinate_system: pixel coordinates; origin at top-left
+gate_line:
+- - 957
+  - 715
+- - 1100
+  - 553
+approach_polygon:
+- - 1205
+  - 249
+- - 895
+  - 436
+- - 696
+  - 631
+- - 772
+  - 715
+- - 1168
+  - 717
+- - 1260
+  - 545
+- - 1213
+  - 252
+inside_reference_point:
+- 705
+- 505
+event_direction:
+  IN: cross from the side opposite inside_reference_point to the inside side
+  OUT: cross from the inside side to the opposite side
+annotation_note: Geometry is a manually calibrated candidate gate. Recheck against
+  visible crossings. Use the tracked person's bottom-centre/footpoint for later crossing
+  tests.
