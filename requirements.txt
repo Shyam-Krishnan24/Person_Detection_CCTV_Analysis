@@ -1,29 +1,6 @@
-# Store People Counter — complete planned offline pipeline dependencies
-# Recommended interpreter: Python 3.12.x on Windows 10/11
-# Install PyTorch/CUDA separately if GPU acceleration is required; see README.
 
-# Core video processing
-opencv-python>=4.10,<5
-numpy>=1.26,<2.3
-Pillow>=10,<13
-
-# Detection and multi-object tracking
-ultralytics>=8.3,<9
-lapx>=0.5.2
-filterpy>=1.4.5
-scipy>=1.11,<2
-
-# Data handling, caches and configuration
-pandas>=2.2,<3
-pyarrow>=15,<25
-PyYAML>=6,<7
-
-# OCR wrapper (the Tesseract executable must also be installed separately)
-pytesseract>=0.3.10,<0.4
-
-# Utilities, visual inspection and testing
-tqdm>=4.66,<5
-matplotlib>=3.8,<4
-pytest>=8,<10
-
-
+numpy>=1.26.0
+opencv-python>=4.9.0
+onnxruntime>=1.17.0
+PyYAML>=6.0.1
+scipy>=1.12.0
