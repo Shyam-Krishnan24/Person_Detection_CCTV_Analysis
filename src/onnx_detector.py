@@ -1,4 +1,7 @@
-"""YOLOv8 ONNX person detector using ONNX Runtime CPU only."""
+"""YOLOv8 ONNX person detector using ONNX Runtime CPU only.
+
+Uses a slightly stricter person NMS threshold to reduce duplicate boxes.
+"""
 from dataclasses import dataclass
 from pathlib import Path
 import cv2
@@ -14,7 +17,7 @@ class PersonDetection:
 
 
 class ONNXPersonDetector:
-    def __init__(self, model_path="models/yolov8n.onnx", confidence=0.25, iou=0.45, input_size=640):
+    def __init__(self, model_path="models/yolov8n.onnx", confidence=0.25, iou=0.40, input_size=640):
         if not 0 <= confidence <= 1:
             raise ValueError("confidence must be between 0 and 1")
         if not 0 <= iou <= 1:

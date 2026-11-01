@@ -1,0 +1,10 @@
+﻿track_id,first_seen_frame,observations,first_footpoint_x,first_footpoint_y,inside_gate,appeared_at_start,stable_track,selected_for_initial_occupancy
+1,0,26,904.02,601.0,True,True,True,True
+2,0,26,1159.63,704.55,False,True,True,False
+3,0,26,286.06,302.99,True,True,True,True
+4,0,26,78.21,493.17,True,True,True,True
+5,0,26,338.5,229.42,True,True,True,True
+6,0,26,148.84,176.38,True,True,True,True
+7,0,26,992.06,716.7,False,True,True,False
+8,0,26,567.76,195.46,True,True,True,True
+9,0,26,296.31,167.18,True,True,True,True
